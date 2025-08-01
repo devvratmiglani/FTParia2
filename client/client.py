@@ -624,7 +624,9 @@ def get_aria2c_path() -> str:
     base_dir = os.path.dirname(os.path.abspath(__file__))
     aria2c_path = os.path.join(base_dir, r"aria2", r"aria2c.exe")
     if os.name != 'nt':
-        print("Please install aria2 for your operating system!")
+        print("[WARN]: Cannot find any installations of aria2!")
+        print("[WARN]: Please install aria2 for your operating system!")
+        sys.exit(3)
         return "aria2c"
     if os.path.isfile(aria2c_path):
         return aria2c_path

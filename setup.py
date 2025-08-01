@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="ftparia2",
-    version="1.0",
+    version="1.1",
     description="",
     url="https://github.com/devvratmiglani",
     author="Devvrat Miglani",
