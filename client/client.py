@@ -38,6 +38,13 @@ import tempfile
 import subprocess
 from urllib.parse import urlparse, unquote, quote
 
+SHOW_TRACEBACK = False
+def silent_excepthook(exctype, value, tb):
+    if SHOW_TRACEBACK:
+        sys.__excepthook__(exctype, value, tb)
+    else:
+        print(f"{exctype.__name__}: {value}")
+
 # ------------------------
 # URL / path helpers
 # ------------------------
@@ -766,6 +773,9 @@ def main():
     # Examples
     ap.add_argument("--examples", action="store_true",help="Show usage examples for all features and exit.")
 
+    # Debug / Tracebacks
+    ap.add_argument('--debug', action='store_true',help="Show tracebacks and errors")
+    
     # Printing Examples
     if sys.argv[1:].__contains__('--example'):
         print_examples()
@@ -773,6 +783,8 @@ def main():
     
     args = ap.parse_args() # parsed later so to pre-evaluate example
     
+    sys.excepthook = silent_excepthook # to disable tracebacks
+    SHOW_TRACEBACK = args.debug
     
     # Deprecation Notice
     if args.exclude_regex:
