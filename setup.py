@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="aria2ftp",
+    name="ftparia2",
     version="1.0",
     description="",
     url="https://github.com/devvratmiglani",
