@@ -174,4 +174,4 @@ To contribute:
 
 ## License
 
-GNU VERSION 2.0 License
+GPL-2.0 license
