@@ -1,7 +1,7 @@
 # FTPAria2
 
 **FTParia2** (CLI: `aftp`) is a high-performance FTP file crawler and downloader. It provides powerful filtering, traversal control, and parallel downloading using `aria2`. The tool is ideal for scripting, automation, or selectively downloading large FTP trees quickly and flexibly.
-
+![FTParia2](./showcase/FTParia2.gif)
 ## Motive
 
 Tools like wget and lftp exist, but none are perfect for this task. Most lack recursive downloading, and those that support it don't offer multithreaded or multi-connection modes—making them slower, especially for many small files. lftp comes close but fails to set proper file permissions, which is tedious to fix on Windows. I also find its commands hard to remember. I prefer using [aria2](https://github.com/aria2/aria2), which handles these things better and faster, [aria2](https://github.com/aria2/aria2) is not intended to recursively crawl and here I fill that gap.
