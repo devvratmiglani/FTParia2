@@ -103,6 +103,7 @@ All filters and commands work only when a valid FTP URI is given.
   -ddir DOWNLOAD_DIR, --download-dir DOWNLOAD_DIR
                         Destination directory name for --download (default: host name).
   --examples            Show usage examples for all features and exit.
+  --debug               Show tracebacks and errors
 ```
 <!-- - `--server`: (Reserved for future - run interactive server) -->
 ## Filters

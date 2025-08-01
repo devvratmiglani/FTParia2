@@ -783,7 +783,7 @@ def main():
     
     args = ap.parse_args() # parsed later so to pre-evaluate example
     
-    sys.excepthook = silent_excepthook # to disable tracebacks
+    sys.excepthook = silent_excepthook # hooking to control tracebacks
     SHOW_TRACEBACK = args.debug
     
     # Deprecation Notice
